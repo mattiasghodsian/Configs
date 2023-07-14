@@ -9,6 +9,7 @@ help() {
     echo -e "  \e[32mdex\e[0m              - SSH into a Docker container with shell."
     echo -e "  \e[32mdexb\e[0m             - SSH into a Docker container with bash."
     echo -e "  \e[32mdnames\e[0m           - Get a list of container names."
+    echo -e "  \e[32mdremove\e[0m          - Remove all containers."
     echo -e "  \e[32mdip\e[0m              - Get IP addresses of all named running containers."
     echo -e "  \e[32mdcompose\e[0m         - Run docker-compose in a targeted directory."
     echo -e "  \e[32mdupdate\e[0m          - Update all existing Docker images to the latest."
@@ -87,6 +88,14 @@ dinspect() {
 
 artisan() {
     php artisan "$@"
+}
+
+dremove() {
+    read -p "Are you sure ? (y/n): " choice
+    if [[ $choice == "y" || $choice == "Y" ]]; then
+        docker rm -f $(docker ps -a -q)
+        echo "All Docker containers removed successfully."
+    fi
 }
 
 # Check if a function is provided
