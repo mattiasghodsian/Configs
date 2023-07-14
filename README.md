@@ -10,3 +10,10 @@ or
 ```
 make uninstall
 ```
+
+then run dev
+```
+dev
+```
+
+![Alt Text](screenshot.png)
