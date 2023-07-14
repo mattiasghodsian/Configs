@@ -16,4 +16,4 @@ then run dev
 dev
 ```
 
-![Alt Text](screenshot.png)
+![Screenshot Of dev command](screenshot.png)
