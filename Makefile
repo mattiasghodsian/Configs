@@ -2,13 +2,9 @@ install:
 	@echo "Installing..."
 	@sudo cp ./scripts/dev.sh /usr/local/bin/dev
 	@sudo chmod +x ./scripts/*
-
-	@./scripts/zshrc.sh
+	
+	@./scripts/app.sh
 	@./scripts/aliases.sh
-
-	@./scripts/nvm.sh
-	@./scripts/php.sh
-	@./scripts/composer.sh
 
 uninstall:
 	@echo "Uninstalling..."

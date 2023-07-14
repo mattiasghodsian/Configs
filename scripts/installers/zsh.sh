@@ -2,6 +2,8 @@
 
 zshrc_path="$HOME/.zshrc"
 
+sudo apt-get -qq zsh
+
 if [ -f "$zshrc_path" ]; then
 
     if grep -q "plugins=" "$zshrc_path"; then
