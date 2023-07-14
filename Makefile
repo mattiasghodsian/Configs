@@ -4,6 +4,8 @@ install:
 	@sudo chmod +x ./scripts/*
 
 	@./scripts/zshrc.sh
+	@./scripts/aliases.sh
+
 	@./scripts/nvm.sh
 	@./scripts/php.sh
 	@./scripts/composer.sh
