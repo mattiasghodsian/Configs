@@ -5,6 +5,8 @@ install:
 
 	@./scripts/zshrc.sh
 	@./scripts/nvm.sh
+	@./scripts/php.sh
+	@./scripts/composer.sh
 
 uninstall:
 	@echo "Uninstalling..."
