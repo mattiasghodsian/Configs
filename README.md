@@ -1,5 +1,5 @@
 # Configs
-This repository contains files and scripts to streamline my workflow and configure my system. The Makefile provides easy installation of my dev command, including frequently used commands and shortcuts. It also simplifies the installation of useful packages and configures files. It's especially useful for quickly setting up a fresh Linux installation, allowing efficient customization and boosting productivity.
+This repository contains files and scripts to streamline my workflow and configure my system. The Makefile provides easy installation of my dev command, including frequently used commands and shortcuts. It also simplifies the installation of useful packages and configures files. It's especially useful for quickly setting up a fresh debian distros, allowing efficient customization and boosting productivity.
 
 # Install
 Open a terminal and navigate to the directory where the Makefile is located, run following command to install the scripts.
