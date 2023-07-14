@@ -14,6 +14,8 @@ if [ -f "$zshrc_path" ]; then
 
     zsh -ic "source $HOME/.zshrc"
 
+    echo -e "\e[32m>> .zshrc file updated.\e[0m"
+
 else
-    echo "No .zshrc file found, skipping..."
+    echo -e "\033[0;31m>> No .zshrc file found, skipping...\033[0m"
 fi
