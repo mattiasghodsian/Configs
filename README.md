@@ -17,3 +17,10 @@ dev
 ```
 
 ![Screenshot Of dev command](screenshot.png)
+
+
+## TODO
+- Move all installers to sub directory `installers`.
+- Create general app.sh isntall curl,git etc then run all files in subdirectory of `installers`.
+- Add vscode, flameshot, postman, brave, dbeaver, docker, zsh, oh my zsh installers.
+- Add script to install global npm packages like vue cli.
