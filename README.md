@@ -22,3 +22,4 @@ dev
 ## TODO
 - Add vscode, flameshot, postman, brave, dbeaver, docker, zsh, oh my zsh installers.
 - Add script to install global npm packages like vue cli.
+- Create a dev.config file in user home directory and load params example: Project directory path 
