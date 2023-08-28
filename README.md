@@ -10,7 +10,7 @@ make install
 ```
 Install only dev command
 ```
-make install
+make install-dev
 ```
 or 
 ```
