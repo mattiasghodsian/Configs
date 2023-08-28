@@ -36,3 +36,10 @@ if [[ $zshChoice == "y" || $zshChoice == "Y" ]]; then
 else
     echo -e "${RED}>> ZSH installation skipped.${RESET}"
 fi
+
+read -p "${GREEN}>> Do you want to install git aliases? (y/n): ${RESET}" gitAliasChoice
+if [[ $gitAliasChoice == "y" || $gitAliasChoice == "Y" ]]; then
+    ./installers/gitalias.sh
+else
+    echo -e "${RED}>> Git alias installation skipped.${RESET}"
+fi
