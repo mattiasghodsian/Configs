@@ -41,6 +41,9 @@ if [[ $nvmChoice == "y" || $nvmChoice == "Y" ]]; then
         fi
     done
 
+    # Start tweaks
+    gnome-tweaks
+
 else
     echo -e "${RED}>> GTK4 theme files skipped.${RESET}"
 fi
