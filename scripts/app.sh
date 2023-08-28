@@ -43,3 +43,10 @@ if [[ $gitAliasChoice == "y" || $gitAliasChoice == "Y" ]]; then
 else
     echo -e "${RED}>> Git alias installation skipped.${RESET}"
 fi
+
+read -p "${GREEN}>> Do you want to install fonts? (y/n): ${RESET}" fontsChoice
+if [[ $fontsChoice == "y" || $fontsChoice == "Y" ]]; then
+    ./installers/fonts.sh
+else
+    echo -e "${RED}>> Git alias installation skipped.${RESET}"
+fi
