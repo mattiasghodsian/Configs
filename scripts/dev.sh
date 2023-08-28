@@ -3,7 +3,7 @@
 help() {
     clear
     echo -e "\e[32mUsage: dev [function]\e[0m"
-    echo -e "\e[32mVersion: 0.1.0\e[0m"
+    echo -e "\e[32mVersion: 0.1.1\e[0m"
     echo
     echo -e "\e[32mAvailable functions:\e[0m"
     echo -e "  \e[32mdex\e[0m              - SSH into a Docker container with shell."
@@ -15,7 +15,10 @@ help() {
     echo -e "  \e[32mdupdate\e[0m          - Update all existing Docker images to the latest."
     echo -e "  \e[32mdclean\e[0m           - Remove dangling Docker images."
     echo -e "  \e[32mdinspect\e[0m         - Inspect a docker container."
-    echo -e "  \e[32martisan\e[0m          - Execute php artisan without php."
+    echo -e "  \e[32mdc\e[0m               - Execute a command in the container."
+    echo -e "  \e[32martisan\e[0m          - Execute php artisan without php at start."
+
+    
     echo
     echo "           For more information visit           "
     echo "   https://github.com/mattiasghodsian/configs   "
@@ -89,6 +92,36 @@ dinspect() {
 artisan() {
     php artisan "$@"
 }
+
+dc() {
+    if [ $# -eq 0 ]; then
+        echo "Usage: dc [user] [container] [command] [--workdir <directory>]"
+        echo "       user: User for the Docker container (default: root)"
+        echo "       container: Docker container name"
+        echo "       command: Command to execute in the container"
+        echo "       --workdir (optional): Set the working directory in the container"
+        return 1
+    fi
+
+    user="${1:-root}"
+    container="${2}"
+    workdir=""
+
+    for ((i = 3; i <= $#; i++)); do
+        if [ "${!i}" = "--workdir" ]; then
+            workdir="${!((i + 1))}"
+            break
+        fi
+    done
+        
+    if [ -n "$workdir" ]; then
+        shift "$((i + 1))"
+        docker exec --workdir "$workdir" --user "$user" "$container" bash -c "${@:3}"
+    else
+        docker exec --user "$user" "$container" bash -c "${@:3}"
+    fi
+}
+
 
 dremove() {
     read -p "Are you sure ? (y/n): " choice
