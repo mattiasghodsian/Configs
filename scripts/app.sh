@@ -48,5 +48,5 @@ read -p "${GREEN}>> Do you want to install fonts? (y/n): ${RESET}" fontsChoice
 if [[ $fontsChoice == "y" || $fontsChoice == "Y" ]]; then
     ./installers/fonts.sh
 else
-    echo -e "${RED}>> Git alias installation skipped.${RESET}"
+    echo -e "${RED}>> Fonts installation skipped.${RESET}"
 fi
