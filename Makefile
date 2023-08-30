@@ -5,6 +5,7 @@ install:
 	@./scripts/app.sh
 	@./scripts/gnome.sh
 	@./scripts/aliases.sh
+	@./scripts/vim.sh
 
 install-dev:
 	@echo "Installing dev command..."
