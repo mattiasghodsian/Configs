@@ -8,7 +8,7 @@ read -p "${GREEN}>> Do you want to install GTK4 theme files? (y/n): ${RESET}" nv
 if [[ $nvmChoice == "y" || $nvmChoice == "Y" ]]; then
     
     echo "${GREEN}>> Installing Tweaks tool"
-    sudo apt install -qq gnome-tweaks
+    sudo apt install -qq gnome-tweaks gnome-shell-extensions
 
     icons_dir="$HOME/.icons"
     themes_dir="$HOME/.themes"
